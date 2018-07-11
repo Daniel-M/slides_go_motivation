@@ -38,7 +38,7 @@
     <section>
               
 
-<h1 id="a-motivation-to-go-lang">A motivation to Go(lang)</h1>
+<h2 id="a-motivation-to-go-lang">A motivation to Go(lang)</h2>
 
 <h3 id="daniel-mejía-r">Daniel Mejía R.</h3>
 
@@ -51,7 +51,7 @@
           <section>
               
 
-<h2 id="what-is-go-lang">What is Go(lang)?</h2>
+<h3 id="what-is-go-lang">What is Go(lang)?</h3>
 
 <p>As <a href="https://golang.org">https://golang.org</a> states,</p>
 
@@ -71,7 +71,7 @@ and Ken Thompson<br /></li>
           <section>
               
 
-<section><h3 id="notable-pros">Notable Pros</h3>
+<section><h4 id="notable-pros">Notable Pros</h4>
 
 <ul>
 <li>Exploit multicore and networked machines through concurrency<br /></li>
@@ -119,7 +119,7 @@ hosted (<a href="http://godoc.org">godoc.org</a>)<br /></li>
           <section>
               
 
-<section><h3 id="cons-of-some-sort">Cons of some sort</h3>
+<section><h4 id="cons-of-some-sort">Cons of some sort</h4>
 
 <ul>
 <li>Non Object Oriented Programming (though it has structures and interfaces)</li>
@@ -146,7 +146,7 @@ to be official within <code>go1.12</code>)</li>
           <section>
               
 
-<section><h2 id="why-go-personal-perspective">Why Go?: personal perspective</h2>
+<section><h3 id="why-go-personal-perspective">Why Go?: personal perspective</h3>
 
 <p>Go helped me with,</p>
 
@@ -163,9 +163,9 @@ to be official within <code>go1.12</code>)</li>
           <section>
               
 
-<section><h2 id="first-steps">First steps</h2>
+<section><h3 id="first-steps">First steps</h3>
 
-<h3 id="installing">Installing</h3>
+<h4 id="installing">Installing</h4>
 
 <p>Go binary install is recommended to have the latest go version
 from <a href="https://golang.org/dl/">https://golang.org/dl/</a> following instructions</p>
@@ -175,7 +175,7 @@ from <a href="https://golang.org/dl/">https://golang.org/dl/</a> following instr
           <section>
               
 
-<h3 id="the-workspace">The Workspace</h3>
+<h4 id="the-workspace">The Workspace</h4>
 
 <p>Go relies in the concept of <em>workspace</em>. The environment variable <code>GOPATH</code> must
 be set to an existing directory which will hold all the go packages,
@@ -186,7 +186,7 @@ binaries and precompiled packages</p>
           <section>
               
 
-<h3 id="sample-workspace">Sample workspace</h3>
+<h4 id="sample-workspace">Sample workspace</h4>
 
 <pre><code>bin/
     hello                          # command executable
@@ -219,7 +219,7 @@ src/
           <section>
               
 
-<h3 id="making-the-binaries-available">Making the binaries available</h3>
+<h4 id="making-the-binaries-available">Making the binaries available</h4>
 
 <p>Put compiled go packages as console commands is as easy as adding <code>GOPATH</code> to
 the <code>PATH</code>,</p>
@@ -232,7 +232,7 @@ the <code>PATH</code>,</p>
           <section>
               
 
-<h3 id="installing-go-packages">Installing go packages</h3>
+<h4 id="installing-go-packages">Installing go packages</h4>
 
 <p>To include a package within a workspace,</p>
 
@@ -252,7 +252,7 @@ the <code>PATH</code>,</p>
           <section>
               
 
-<h2 id="anatomy-of-a-go-source-file">Anatomy of a go source file</h2>
+<h3 id="anatomy-of-a-go-source-file">Anatomy of a go source file</h3>
 
 <p>Open <a href="https://play.golang.org/">https://play.golang.org/</a> in your browsers</p>
 
@@ -277,7 +277,7 @@ func main() { // &lt;- Opening braces must be here
           <section>
               
 
-<section><h2 id="variable-declaration">Variable declaration</h2>
+<section><h3 id="variable-declaration">Variable declaration</h3>
 
 <p><a href="https://play.golang.org/p/HYUpJDXWte0">https://play.golang.org/p/HYUpJDXWte0</a></p>
 
@@ -305,7 +305,7 @@ func main() {
           <section>
               
 
-<h3 id="short-variable-declarations">Short Variable Declarations</h3>
+<h4 id="short-variable-declarations">Short Variable Declarations</h4>
 
 <pre><code>package main
 
@@ -333,7 +333,7 @@ func main() {
           <section>
               
 
-<section><h2 id="functions">Functions</h2>
+<section><h3 id="functions">Functions</h3>
 
 <p><a href="https://play.golang.org/p/Fy3IxY-LLdI">https://play.golang.org/p/Fy3IxY-LLdI</a></p>
 
@@ -367,7 +367,7 @@ func main() {
           <section>
               
 
-<h3 id="functions-with-multiple-return">Functions with multiple return</h3>
+<h4 id="functions-with-multiple-return">Functions with multiple return</h4>
 
 <p><a href="https://play.golang.org/p/yUPdKi-zeHL">https://play.golang.org/p/yUPdKi-zeHL</a></p>
 
@@ -402,7 +402,7 @@ func main() {
           <section>
               
 
-<h2 id="go-basic-types">Go Basic types</h2>
+<h3 id="go-basic-types">Go Basic types</h3>
 
 <pre><code>bool // true, false
 
@@ -426,7 +426,7 @@ complex64 complex128 // Yes!, complex numbers natively supported
           <section>
               
 
-<h2 id="go-loops">Go Loops</h2>
+<h3 id="go-loops">Go Loops</h3>
 
 <p>A single loop structure rules them all,</p>
 
@@ -474,9 +474,9 @@ func main() {
           <section>
               
 
-<section><h2 id="go-conditionals">Go conditionals</h2>
+<section><h3 id="go-conditionals">Go conditionals</h3>
 
-<h3 id="if-statement">If statement</h3>
+<h4 id="if-statement">If statement</h4>
 
 <p><a href="https://play.golang.org/p/g5TY4wb916e">https://play.golang.org/p/g5TY4wb916e</a></p>
 
@@ -503,7 +503,7 @@ func main() {
           <section>
               
 
-<h3 id="if-else">If else</h3>
+<h4 id="if-else">If else</h4>
 
 <p><a href="https://play.golang.org/p/p8PEjGHd8WM">https://play.golang.org/p/p8PEjGHd8WM</a></p>
 
@@ -531,7 +531,7 @@ func main() {
           <section>
               
 
-<h3 id="if-else-if-else">If else-if else</h3>
+<h4 id="if-else-if-else">If else-if else</h4>
 
 <pre><code>
 func abs(x float64) float64 {
@@ -552,7 +552,7 @@ func abs(x float64) float64 {
           <section>
               
 
-<h2 id="defer">Defer</h2>
+<h3 id="defer">Defer</h3>
 
 <p>&ldquo;Defers&rdquo; function call</p>
 
@@ -578,7 +578,7 @@ func main() {
           <section>
               
 
-<h2 id="pointers">Pointers</h2>
+<h3 id="pointers">Pointers</h3>
 
 <p>Go has pointers, but lack pointer arithmetic
 <a href="https://play.golang.org/p/O0qc2lYGuAK">https://play.golang.org/p/O0qc2lYGuAK</a></p>
@@ -608,7 +608,7 @@ func main() {
           <section>
               
 
-<h2 id="structures">Structures</h2>
+<h3 id="structures">Structures</h3>
 
 <p><a href="https://play.golang.org/p/zQWVtBPH3-w">https://play.golang.org/p/zQWVtBPH3-w</a></p>
 
