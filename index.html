@@ -1,0 +1,685 @@
+<!doctype html><html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.30.2" />
+    <meta charset="utf-8">
+    <title>My presentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/moon.css" id="theme">
+    
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/css/print/pdf.css' : 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    
+    
+  </head>
+  <body>
+    
+  <div class="reveal">
+  
+  <div class="slides">
+    
+    <section>
+              
+
+<h1 id="a-motivation-to-go-lang">A motivation to Go(lang)</h1>
+
+<h3 id="daniel-mejía-r">Daniel Mejía R.</h3>
+
+<h3 id="daniel-m-github-io">daniel-m.github.io</h3>
+
+<h6 id="july-2018">July 2018</h6>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="what-is-go-lang">What is Go(lang)?</h2>
+
+<p>As <a href="https://golang.org">https://golang.org</a> states,</p>
+
+<blockquote>
+<p><em><a href="https://golang.org/">Go</a> is an open source programming language that makes
+it easy to build simple, reliable, and efficient software.</em></p>
+</blockquote>
+
+<ul>
+<li>Developed at Google as early as 2009 by Robert Griesemer, Rob Pike,
+and Ken Thompson<br /></li>
+<li>Version 1.0 Released at 2012<br /></li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="notable-pros">Notable Pros</h3>
+
+<ul>
+<li>Exploit multicore and networked machines through concurrency<br /></li>
+<li>Compiles way too fast</li>
+<li>Garbage collected at compilation time</li>
+<li>Strongly typed</li>
+<li>Easy management of development environment (Workspace)</li>
+<li>git oriented development (packages automatically downloaded from remote repos)</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li>Native code formatting tool (linter)<br /></li>
+<li>Package documentation generated at ease with native tools and self
+hosted (<a href="http://godoc.org">godoc.org</a>)<br /></li>
+<li>Package testing with native tools<br /></li>
+<li>Race condition analyzer<br /></li>
+<li>Multi-platform (Operating systems)</li>
+<li>Multi-architecture (Hardware compatibility)</li>
+<li>Cross compiling as easy as changing an environment variable</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li>Monolithic executables<br /></li>
+<li>Runtime reflection (mutable executables at runtime)<br /></li>
+<li>Intensively documented, standardized<br /></li>
+<li>Easily shareable code snippets that execute on the cloud (<a href="http://play.golang.org">http://play.golang.org</a>)</li>
+<li>Great community</li>
+</ul>
+
+<p><strong>And lots more&hellip;</strong></p>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="cons-of-some-sort">Cons of some sort</h3>
+
+<ul>
+<li>Non Object Oriented Programming (though it has structures and interfaces)</li>
+<li>Non functional programming (though it can be emulated through functions
+or closures)</li>
+<li>Monolithic executables (lacks the concept of shared library to link against it)<br /></li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li>Non centralized package server</li>
+<li>Depends on external services to provide packages (git forges -&gt; <em>expose security vulnerabilities!)</em></li>
+<li>Dependency management still in development (early implementations of <code>vgo</code>
+to be official within <code>go1.12</code>)</li>
+</ul>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h2 id="why-go-personal-perspective">Why Go?: personal perspective</h2>
+
+<p>Go helped me with,</p>
+
+<ul>
+<li>Adopt proper style: hard to implement <em>brute-force</em> programming<br /></li>
+<li>First steps with web-dev<br /></li>
+<li>Lots of API libraries to experiment with<br /></li>
+<li>Brag about programming with the Google&rsquo;s language<br /></li>
+</ul>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h2 id="first-steps">First steps</h2>
+
+<h3 id="installing">Installing</h3>
+
+<p>Go binary install is recommended to have the latest go version
+from <a href="https://golang.org/dl/">https://golang.org/dl/</a> following instructions</p>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="the-workspace">The Workspace</h3>
+
+<p>Go relies in the concept of <em>workspace</em>. The environment variable <code>GOPATH</code> must
+be set to an existing directory which will hold all the go packages,
+binaries and precompiled packages</p>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="sample-workspace">Sample workspace</h3>
+
+<pre><code>bin/
+    hello                          # command executable
+    outyet                         # command executable
+pkg/
+    linux_amd64/
+        github.com/golang/example/
+            stringutil.a           # package object
+src/
+    github.com/golang/example/
+        .git/                      # Git repository metadata
+	hello/
+	    hello.go               # command source
+	outyet/
+	    main.go                # command source
+	    main_test.go           # test source
+	stringutil/
+	    reverse.go             # package source
+	    reverse_test.go        # test source
+    golang.org/x/image/
+        .git/                      # Git repository metadata
+	bmp/
+	    reader.go              # package source
+	    writer.go              # package source
+    ... (many more repositories and packages omitted) ...
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="making-the-binaries-available">Making the binaries available</h3>
+
+<p>Put compiled go packages as console commands is as easy as adding <code>GOPATH</code> to
+the <code>PATH</code>,</p>
+
+<pre><code>$ export PATH=$GOPATH/bin:$PATH
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="installing-go-packages">Installing go packages</h3>
+
+<p>To include a package within a workspace,</p>
+
+<pre><code>$ go get github.com/user/hello
+</code></pre>
+
+<p>Installing a go package goes as,</p>
+
+<pre><code>$ go install github.com/user/hello
+</code></pre>
+
+<p>Which first &lt;<code>go get</code>&gt; and then compiles the binaries into <code>$GOPATH/bin</code></p>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="anatomy-of-a-go-source-file">Anatomy of a go source file</h2>
+
+<p>Open <a href="https://play.golang.org/">https://play.golang.org/</a> in your browsers</p>
+
+<pre><code>package main // Every go package starts with the word &quot;package&quot;
+
+// Here come the package imports
+import (
+	&quot;fmt&quot;
+)
+
+// Here comes the main function
+func main() { // &lt;- Opening braces must be here 
+
+	// We are using the method &quot;Println&quot;
+	// included within the package &quot;fmt&quot;
+	fmt.Println(&quot;Hello, playground&quot;) 
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<section><h2 id="variable-declaration">Variable declaration</h2>
+
+<p><a href="https://play.golang.org/p/HYUpJDXWte0">https://play.golang.org/p/HYUpJDXWte0</a></p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;math/rand&quot;
+)
+
+func main() {
+	// Variable declaration follows the rule
+	// var name type [= initial_value] 
+	var greeting string = &quot;Hello, 世界&quot;
+
+	fmt.Println(greeting)
+
+	fmt.Println(&quot;My favorite number is&quot;, rand.Intn(10))
+}
+
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="short-variable-declarations">Short Variable Declarations</h3>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;math/rand&quot;
+)
+
+func main() {
+	// Variables can be assigned by
+	// the &quot;:=&quot; operator which infers the
+	// adequate types
+	greeting := &quot;Hello, 世界&quot;
+
+	fmt.Println(greeting)
+
+	fmt.Println(&quot;My favorite number is&quot;, rand.Intn(10))
+}
+
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h2 id="functions">Functions</h2>
+
+<p><a href="https://play.golang.org/p/Fy3IxY-LLdI">https://play.golang.org/p/Fy3IxY-LLdI</a></p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;math/rand&quot;
+)
+
+// Greeter returns a greeting string  
+func Greeter() string {
+	return &quot;Hello, 世界&quot;
+}
+
+// Number returns a random int seeded with seed
+func Number(seed int) int {
+	return rand.Intn(seed)
+}
+
+func main() {
+
+	fmt.Println(Greeter())
+
+	fmt.Println(&quot;My favorite number is&quot;, Number(10))
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="functions-with-multiple-return">Functions with multiple return</h3>
+
+<p><a href="https://play.golang.org/p/yUPdKi-zeHL">https://play.golang.org/p/yUPdKi-zeHL</a></p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+	&quot;math/rand&quot;
+)
+
+// GreeterNumber returns a greeting string 
+// and a number.
+// Yes, go supports multiple return functions
+func GreeterNumber(seed int) (string, int) {
+	return &quot;Hello, 世界&quot;, rand.Intn(seed)
+}
+
+func main() {
+	// Variables can be assigned by
+	// the &quot;:=&quot; operator which infers the
+	// adequate types
+	greet, num := GreeterNumber(10)
+	fmt.Println(greet)
+
+	fmt.Println(&quot;My favorite number is&quot;, num)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="go-basic-types">Go Basic types</h2>
+
+<pre><code>bool // true, false
+
+string // &quot;Hello World!&quot;
+
+int  int8  int16  int32  int64 // Several flavors of integers
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8. Size guaranteed
+
+rune // alias for int32
+     // represents a Unicode code point. Size guaranteed   
+
+float32 float64 // single and double precision
+
+complex64 complex128 // Yes!, complex numbers natively supported
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="go-loops">Go Loops</h2>
+
+<p>A single loop structure rules them all,</p>
+
+<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    // single condition for looping
+    i := 1
+    for i &lt;= 3 {
+        fmt.Println(i)
+        i = i + 1
+    }
+
+    // A classic C-like initial/condition/after `for` loop.
+    for j := 7; j &lt;= 9; j++ {
+        fmt.Println(j)
+    }
+
+    // `for` without a condition will loop repeatedly
+    // until you `break` out of the loop or `return` from
+    // the enclosing function.
+    for {
+        fmt.Println(&quot;loop&quot;)
+        break
+    }
+
+    // You can also `continue` to the next iteration of
+    // the loop.
+    for n := 0; n &lt;= 5; n++ {
+        if n%2 == 0 {
+            continue
+        }
+        fmt.Println(n)
+    }
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<section><h2 id="go-conditionals">Go conditionals</h2>
+
+<h3 id="if-statement">If statement</h3>
+
+<p><a href="https://play.golang.org/p/g5TY4wb916e">https://play.golang.org/p/g5TY4wb916e</a></p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func abs(x float64) float64 {
+	if x &lt; 0 {
+		return abs(-x)
+	}
+	return x
+}
+
+func main() {
+	fmt.Println(abs(2), abs(-4))
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="if-else">If else</h3>
+
+<p><a href="https://play.golang.org/p/p8PEjGHd8WM">https://play.golang.org/p/p8PEjGHd8WM</a></p>
+
+<pre><code>package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func abs(x float64) float64 {
+	if x &lt; 0 {
+		return abs(-x)
+	} else {
+		return x
+  }
+}
+
+func main() {
+	fmt.Println(abs(2), abs(-4))
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="if-else-if-else">If else-if else</h3>
+
+<pre><code>
+func abs(x float64) float64 {
+	if x &lt; 0 {
+		return abs(-x)
+	} elif x == 0 {
+		return 0
+	} else {
+		return x
+  }
+}
+
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="defer">Defer</h2>
+
+<p>&ldquo;Defers&rdquo; function call</p>
+
+<p><a href="https://play.golang.org/p/TD6SZBXwn_r">https://play.golang.org/p/TD6SZBXwn_r</a></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+	defer fmt.Println(&quot;print last...&quot;)
+	defer fmt.Println(&quot;You didn't expected me to&quot;)
+	defer fmt.Println(&quot;I bet,&quot;)
+	
+	fmt.Println(&quot;Hey there!&quot;)
+	fmt.Println(&quot;Ready to see something amazing?&quot;)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="pointers">Pointers</h2>
+
+<p>Go has pointers, but lack pointer arithmetic
+<a href="https://play.golang.org/p/O0qc2lYGuAK">https://play.golang.org/p/O0qc2lYGuAK</a></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+	i, j := 42, 2701
+
+	p := &amp;i         // point to i
+	fmt.Println(p)  // who is p?
+	fmt.Println(*p) // read i through the pointer
+	*p = 21         // set i through the pointer
+	fmt.Println(i)  // see the new value of i
+
+	p = &amp;j         // point to j
+	fmt.Println(p)  // who is p now?
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h2 id="structures">Structures</h2>
+
+<p><a href="https://play.golang.org/p/zQWVtBPH3-w">https://play.golang.org/p/zQWVtBPH3-w</a></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+// We declare the Person structure
+type Person struct {
+	Name string
+	LastN string
+	Email string
+}
+
+func main() {
+	john := Person{&quot;John&quot;,&quot;Doe&quot;, &quot;john@doe.jd&quot;}
+	fmt.Println(&quot;The person is&quot;, john)
+}
+</code></pre>
+
+            </section>
+          
+  </div>
+</div>
+
+    <script type="application/json" id="reveal-hugo-page-params">null</script>
+    <script type="application/json" id="reveal-hugo-site-params">{"theme":"moon"}</script>
+    <script type="application/json" id="reveal-hugo-defaults">{"center":true,"controls":true,"highlight_theme":"default","history":true,"progress":true,"theme":"black","transition":"slide"}</script>
+    <script type="text/javascript">
+      window.revealHugoDependencies = {
+        dependencies: [
+          { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.6.0/plugin/zoom-js/zoom.js', async: true },
+          
+          { src: '\/localhost\/reveal-hugo\/plugin\/notes\/notes.js', async: true }
+      ]};
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+    <script type="text/javascript">
+      
+      
+      function camelize(map) {
+        if (map) {
+          Object.keys(map).forEach(function(k) {
+            newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+            if (newK != k) {
+              map[newK] = map[k];
+              delete map[k];
+            }
+          });
+        }
+        return map;
+      }
+      
+      var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+      var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+      var revealHugoDefaults = JSON.parse(document.getElementById('reveal-hugo-defaults').innerHTML);
+
+      
+      var options = Object.assign({},
+        camelize(revealHugoDefaults),
+        camelize(revealHugoSiteParams),
+        camelize(revealHugoPageParams),
+        revealHugoDependencies);
+      Reveal.initialize(options);
+
+    </script>
+    
+  </body>
+</html>
