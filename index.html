@@ -42,7 +42,7 @@
 
 <h3 id="daniel-mejía-r">Daniel Mejía R.</h3>
 
-<h3 id="daniel-m-github-io">daniel-m.github.io</h3>
+<h3 id="http-daniel-m-github-io-http-daniel-m-github-io"><a href="http://daniel-m.github.io"><code>http://daniel-m.github.io</code></a></h3>
 
 <h6 id="july-2018">July 2018</h6>
 
@@ -62,8 +62,8 @@ it easy to build simple, reliable, and efficient software.</em></p>
 
 <ul>
 <li>Developed at Google as early as 2009 by Robert Griesemer, Rob Pike,
-and Ken Thompson<br /></li>
-<li>Version 1.0 Released at 2012<br /></li>
+and Ken Thompson.<br /></li>
+<li>Version 1.0 Released at 2012.<br /></li>
 </ul>
 
 
@@ -74,12 +74,12 @@ and Ken Thompson<br /></li>
 <section><h4 id="notable-pros">Notable Pros</h4>
 
 <ul>
-<li>Exploit multicore and networked machines through concurrency<br /></li>
-<li>Compiles way too fast</li>
-<li>Garbage collected at compilation time</li>
-<li>Strongly typed</li>
-<li>Easy management of development environment (Workspace)</li>
-<li>git oriented development (packages automatically downloaded from remote repos)</li>
+<li>Exploit multicore and networked machines through concurrency.<br /></li>
+<li>Compiles way too fast.</li>
+<li>Garbage collected at compilation time.</li>
+<li>Strongly typed.</li>
+<li>Easy management of development environment (Workspace).</li>
+<li>git oriented development (packages automatically downloaded from remote repos).</li>
 </ul>
 
 
@@ -88,14 +88,14 @@ and Ken Thompson<br /></li>
               
 
 <ul>
-<li>Native code formatting tool (linter)<br /></li>
-<li>Package documentation generated at ease with native tools and self
-hosted (<a href="http://godoc.org">godoc.org</a>)<br /></li>
-<li>Package testing with native tools<br /></li>
-<li>Race condition analyzer<br /></li>
-<li>Multi-platform (Operating systems)</li>
-<li>Multi-architecture (Hardware compatibility)</li>
-<li>Cross compiling as easy as changing an environment variable</li>
+<li>Native code formatting tool (linter).<br /></li>
+<li>Package documentation generated at ease with native tools and self.
+hosted (<a href="http://godoc.org">godoc.org</a>).<br /></li>
+<li>Package testing with native tools.<br /></li>
+<li>Race condition analyzer.<br /></li>
+<li>Multi-platform (Operating systems).<br /></li>
+<li>Multi-architecture (Hardware compatibility).</li>
+<li>Cross compiling as easy as changing an environment variable.</li>
 </ul>
 
 
@@ -104,11 +104,11 @@ hosted (<a href="http://godoc.org">godoc.org</a>)<br /></li>
               
 
 <ul>
-<li>Monolithic executables<br /></li>
-<li>Runtime reflection (mutable executables at runtime)<br /></li>
-<li>Intensively documented, standardized<br /></li>
-<li>Easily shareable code snippets that execute on the cloud (<a href="http://play.golang.org">http://play.golang.org</a>)</li>
-<li>Great community</li>
+<li>Monolithic executables.<br /></li>
+<li>Runtime reflection (mutable executables at runtime).<br /></li>
+<li>Intensively documented, standardized.<br /></li>
+<li>Easily shareable code snippets that execute on the cloud (<a href="http://play.golang.org">http://play.golang.org</a>).</li>
+<li>Great community.</li>
 </ul>
 
 <p><strong>And lots more&hellip;</strong></p>
@@ -122,10 +122,10 @@ hosted (<a href="http://godoc.org">godoc.org</a>)<br /></li>
 <section><h4 id="cons-of-some-sort">Cons of some sort</h4>
 
 <ul>
-<li>Non Object Oriented Programming (though it has structures and interfaces)</li>
+<li>Non Object Oriented Programming (though it has structures and interfaces).<br /></li>
 <li>Non functional programming (though it can be emulated through functions
-or closures)</li>
-<li>Monolithic executables (lacks the concept of shared library to link against it)<br /></li>
+or closures).<br /></li>
+<li>Monolithic executables (lacks the concept of shared library to link against it).<br /></li>
 </ul>
 
 
@@ -134,10 +134,10 @@ or closures)</li>
               
 
 <ul>
-<li>Non centralized package server</li>
-<li>Depends on external services to provide packages (git forges -&gt; <em>expose security vulnerabilities!)</em></li>
+<li>Non centralized package server.<br /></li>
+<li>Depends on external services to provide packages (git forges -&gt; <em>expose security vulnerabilities!)</em>.<br /></li>
 <li>Dependency management still in development (early implementations of <code>vgo</code>
-to be official within <code>go1.12</code>)</li>
+to be official within <code>go1.12</code>).<br /></li>
 </ul>
 </section>
 
@@ -151,10 +151,10 @@ to be official within <code>go1.12</code>)</li>
 <p>Go helped me with,</p>
 
 <ul>
-<li>Adopt proper style: hard to implement <em>brute-force</em> programming<br /></li>
-<li>First steps with web-dev<br /></li>
-<li>Lots of API libraries to experiment with<br /></li>
-<li>Brag about programming with the Google&rsquo;s language<br /></li>
+<li>Adopt proper style: hard to implement <em>brute-force</em> programming.<br /></li>
+<li>First steps with web-dev.<br /></li>
+<li>Lots of API libraries to experiment with.<br /></li>
+<li>Brag about programming with the Google&rsquo;s language.<br /></li>
 </ul>
 </section>
 
@@ -168,7 +168,7 @@ to be official within <code>go1.12</code>)</li>
 <h4 id="installing">Installing</h4>
 
 <p>Go binary install is recommended to have the latest go version
-from <a href="https://golang.org/dl/">https://golang.org/dl/</a> following instructions</p>
+from <a href="https://golang.org/dl/">https://golang.org/dl/</a> following instructions.</p>
 
 
             </section>
@@ -333,6 +333,30 @@ func main() {
           <section>
               
 
+<h3 id="go-basic-types">Go Basic types</h3>
+
+<pre><code>bool // true, false
+
+string // &quot;Hello World!&quot;
+
+int  int8  int16  int32  int64 // Several flavors of integers
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8. Size guaranteed
+
+rune // alias for int32
+     // represents a Unicode code point. Size guaranteed   
+
+float32 float64 // single and double precision
+
+complex64 complex128 // Yes!, complex numbers natively supported
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
 <section><h3 id="functions">Functions</h3>
 
 <p><a href="https://play.golang.org/p/Fy3IxY-LLdI">https://play.golang.org/p/Fy3IxY-LLdI</a></p>
@@ -395,42 +419,17 @@ func main() {
 	fmt.Println(&quot;My favorite number is&quot;, num)
 }
 </code></pre>
-</section>
 
 
             </section>
           <section>
               
 
-<h3 id="go-basic-types">Go Basic types</h3>
+<h3 id="defer">Defer</h3>
 
-<pre><code>bool // true, false
+<p>&ldquo;Defers&rdquo; function call</p>
 
-string // &quot;Hello World!&quot;
-
-int  int8  int16  int32  int64 // Several flavors of integers
-uint uint8 uint16 uint32 uint64 uintptr
-
-byte // alias for uint8. Size guaranteed
-
-rune // alias for int32
-     // represents a Unicode code point. Size guaranteed   
-
-float32 float64 // single and double precision
-
-complex64 complex128 // Yes!, complex numbers natively supported
-</code></pre>
-
-
-            </section>
-          <section>
-              
-
-<h3 id="go-loops">Go Loops</h3>
-
-<p>A single loop structure rules them all,</p>
-
-<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
+<p><a href="https://play.golang.org/p/TD6SZBXwn_r">https://play.golang.org/p/TD6SZBXwn_r</a></p>
 
 <pre><code>package main
 
@@ -438,36 +437,15 @@ import &quot;fmt&quot;
 
 func main() {
 
-    // single condition for looping
-    i := 1
-    for i &lt;= 3 {
-        fmt.Println(i)
-        i = i + 1
-    }
-
-    // A classic C-like initial/condition/after `for` loop.
-    for j := 7; j &lt;= 9; j++ {
-        fmt.Println(j)
-    }
-
-    // `for` without a condition will loop repeatedly
-    // until you `break` out of the loop or `return` from
-    // the enclosing function.
-    for {
-        fmt.Println(&quot;loop&quot;)
-        break
-    }
-
-    // You can also `continue` to the next iteration of
-    // the loop.
-    for n := 0; n &lt;= 5; n++ {
-        if n%2 == 0 {
-            continue
-        }
-        fmt.Println(n)
-    }
+	defer fmt.Println(&quot;print last...&quot;)
+	defer fmt.Println(&quot;You didn't expected me to&quot;)
+	defer fmt.Println(&quot;I bet,&quot;)
+	
+	fmt.Println(&quot;Hey there!&quot;)
+	fmt.Println(&quot;Ready to see something amazing?&quot;)
 }
 </code></pre>
+</section>
 
 
             </section>
@@ -552,24 +530,17 @@ func abs(x float64) float64 {
           <section>
               
 
-<h3 id="defer">Defer</h3>
+<section><h3 id="go-loops">Go Loops</h3>
 
-<p>&ldquo;Defers&rdquo; function call</p>
+<p>A single loop structure rules them all,</p>
 
-<p><a href="https://play.golang.org/p/TD6SZBXwn_r">https://play.golang.org/p/TD6SZBXwn_r</a></p>
+<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
 
-<pre><code>package main
-
-import &quot;fmt&quot;
-
-func main() {
-
-	defer fmt.Println(&quot;print last...&quot;)
-	defer fmt.Println(&quot;You didn't expected me to&quot;)
-	defer fmt.Println(&quot;I bet,&quot;)
-	
-	fmt.Println(&quot;Hey there!&quot;)
-	fmt.Println(&quot;Ready to see something amazing?&quot;)
+<pre><code>// single condition for looping
+i := 1
+for i &lt;= 3 {
+    fmt.Println(i)
+    i = i + 1
 }
 </code></pre>
 
@@ -578,7 +549,228 @@ func main() {
           <section>
               
 
-<h3 id="pointers">Pointers</h3>
+<h3 id="go-loops-1">Go Loops</h3>
+
+<p>A single loop structure rules them all,</p>
+
+<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
+
+<pre><code>// A classic C-like initial/condition/after `for` loop.
+for j := 7; j &lt;= 9; j++ {
+    fmt.Println(j)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="go-loops-2">Go Loops</h3>
+
+<p>A single loop structure rules them all,</p>
+
+<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
+
+<pre><code>// `for` without a condition will loop repeatedly
+// until you `break` out of the loop or `return` from
+// the enclosing function.
+for {
+    fmt.Println(&quot;loop&quot;)
+    break
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="go-loops-3">Go Loops</h3>
+
+<p>A single loop structure rules them all,</p>
+
+<p><a href="https://play.golang.org/p/HwJ5nXetGDV">https://play.golang.org/p/HwJ5nXetGDV</a></p>
+
+<pre><code>// You can also `continue` to the next iteration of
+// the loop.
+for n := 0; n &lt;= 5; n++ {
+    if n%2 == 0 {
+        continue
+    }
+    fmt.Println(n)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="arrays">Arrays</h3>
+
+<p><a href="https://play.golang.org/p/A1oG39orUpZ">https://play.golang.org/p/A1oG39orUpZ</a></p>
+
+<ul>
+<li>Arrays are of fixed size.<br /></li>
+<li>The type <code>[n]T</code> is an array of n values of type <code>T</code>.<br /></li>
+</ul>
+
+<pre><code>func main() {
+	var a [2]string
+	a[0] = &quot;Hello&quot;
+	a[1] = &quot;World&quot;
+	fmt.Println(a[0], a[1])
+	fmt.Println(a)
+
+	// Or the short declaration
+	// also known as &quot;array literal&quot;
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="slices">Slices</h3>
+
+<ul>
+<li>A slice is a dynamically-sized.<br /></li>
+<li>The type <code>[]T</code> is a slice with elements of type <code>T</code>.<br /></li>
+<li>A slice is formed by specifying two indices, a low and high bound, separated by a colon: <code>a[low : high]</code>
+high is not included.<br /></li>
+</ul>
+
+<pre><code>primes := [6]int{2, 3, 5, 7, 11, 13}
+var s []int = primes[1:4]
+fmt.Println(s) // Outputs: [3 5 7]
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="slices-and-make-operator">Slices and <code>make</code> operator</h3>
+
+<p><a href="https://play.golang.org/p/ZwE_3e063GG">https://play.golang.org/p/ZwE_3e063GG</a></p>
+
+<ul>
+<li>The make function allocates a zeroed array and returns a slice that refers to that array:</li>
+</ul>
+
+<pre><code>a := make([]int, 5)  // len(a)=5
+fmt.Printf(&quot;len=%d cap=%d %v\n&quot;, len(a), cap(a), a)
+// Outputs:
+// len=5 cap=5 [0 0 0 0 0]
+
+b := make([]int, 0, 5)
+fmt.Printf(&quot;len=%d cap=%d %v\n&quot;, len(b), cap(b), b)
+// Outputs:
+// b len=0 cap=5 []
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="maps">Maps</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="maps-and-make-operator">Maps and <code>make</code> operator</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="range-operator-for-slices">Range operator for slices</h3>
+
+<p><a href="https://play.golang.org/p/NtNGEbZokIX">https://play.golang.org/p/NtNGEbZokIX</a></p>
+
+<ul>
+<li>The range form of the for loop iterates over a slice or map.</li>
+<li>When ranging over a slice, two values are returned: the first is the index, and  a copy of the element at that index.</li>
+</ul>
+
+<pre><code>var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+for i, v := range pow {
+	fmt.Printf(&quot;2**%d = %d\n&quot;, i, v)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="range-operator-for-maps">Range operator for maps</h3>
+
+<p><a href="https://play.golang.org/p/2h5cjnVFbzc">https://play.golang.org/p/2h5cjnVFbzc</a></p>
+
+<ul>
+<li>When ranging over a slice, two values are returned for each iteration.
+The first is the key, and the second is a copy of the element at that key.</li>
+</ul>
+
+<pre><code>var pow = map[int]int{0:1, 1:2, 2:4, 3:8}
+for i, v := range pow {
+	fmt.Printf(&quot;2**%d = %d\n&quot;, i, v)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="anonymous-functions-lambdas">Anonymous functions (lambdas)</h3>
+
+<ul>
+<li>Functions can be passed around just like other values, and may be used as function arguments and return values.</li>
+</ul>
+
+<pre><code>func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func main() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="pointers">Pointers</h3>
 
 <p>Go has pointers, but lack pointer arithmetic
 <a href="https://play.golang.org/p/O0qc2lYGuAK">https://play.golang.org/p/O0qc2lYGuAK</a></p>
@@ -608,15 +800,38 @@ func main() {
           <section>
               
 
+<h3 id="pointer-syntax">Pointer Syntax</h3>
+
+<p>The type <code>*T</code> is a pointer to a <code>T</code> value. Its zero value is <code>nil</code>.</p>
+
+<pre><code>var p *int // Will store a pointer (nil)
+</code></pre>
+
+<p>The <code>&amp;</code> operator generates a pointer to its operand.</p>
+
+<pre><code>i := 42 // Short int declaration
+p = &amp;i // p now points to i
+</code></pre>
+
+<p>The <code>*</code> operator denotes the pointer&rsquo;s underlying value.</p>
+
+<pre><code>fmt.Println(*p) // read i through the pointer p
+*p = 21         // set i through the pointer p
+</code></pre>
+
+<p>This is known as &ldquo;dereferencing&rdquo; or &ldquo;indirecting&rdquo;.</p>
+</section>
+
+
+            </section>
+          <section>
+              
+
 <h3 id="structures">Structures</h3>
 
 <p><a href="https://play.golang.org/p/zQWVtBPH3-w">https://play.golang.org/p/zQWVtBPH3-w</a></p>
 
-<pre><code>package main
-
-import &quot;fmt&quot;
-
-// We declare the Person structure
+<pre><code>// We declare the Person structure
 type Person struct {
 	Name string
 	LastN string
@@ -628,6 +843,83 @@ func main() {
 	fmt.Println(&quot;The person is&quot;, john)
 }
 </code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="structures-and-functions">Structures and functions</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="structure-methods">Structure Methods</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="interfaces">Interfaces</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="concurrency-go-routines">Concurrency: Go routines</h3>
+
+<p><a href="https://play.golang.org/p/SbM4wqm4u-K">https://play.golang.org/p/SbM4wqm4u-K</a></p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="concurrency-channels">Concurrency: Channels</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="simple-testing">Simple Testing</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="testing">Testing</h3>
+
+<p>[]()</p>
+
+<pre><code></code></pre>
 
             </section>
           
