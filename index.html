@@ -254,7 +254,9 @@ the <code>PATH</code>,</p>
 
 <h3 id="anatomy-of-a-go-source-file">Anatomy of a go source file</h3>
 
-<p>Open <a href="https://play.golang.org/">https://play.golang.org/</a> in your browsers</p>
+<p>Open <a href="https://play.golang.org/">https://play.golang.org/</a> in your browsers.
+Throughout the presentations, links to the playground will be provided to
+see live performance</p>
 
 <pre><code>package main // Every go package starts with the word &quot;package&quot;
 
@@ -680,23 +682,25 @@ fmt.Printf(&quot;len=%d cap=%d %v\n&quot;, len(b), cap(b), b)
           <section>
               
 
-<section><h3 id="maps">Maps</h3>
+<h3 id="maps">Maps</h3>
 
-<p>[]()</p>
+<p><a href="https://play.golang.org/p/-axSPJOLI1A">https://play.golang.org/p/-axSPJOLI1A</a></p>
 
-<pre><code></code></pre>
+<ul>
+<li>The <code>make</code> function returns a map of the given type, initialized and ready for use.</li>
+</ul>
 
+<pre><code>// Create an array of float64
+udea := [2]float64{6.2554189, -75.5920199}
 
-            </section>
-          <section>
-              
+// Allocate a map from string to [2]float64
+sitios := make(map[string][2]float64)
 
-<h3 id="maps-and-make-operator">Maps and <code>make</code> operator</h3>
-
-<p>[]()</p>
-
-<pre><code></code></pre>
-</section>
+// assign element to map
+sitios[&quot;udea&quot;] = udea
+fmt.Println(sitios)
+// Outputs :[6.2554189 -75.5920199]]
+</code></pre>
 
 
             </section>
@@ -728,7 +732,7 @@ for i, v := range pow {
 <p><a href="https://play.golang.org/p/2h5cjnVFbzc">https://play.golang.org/p/2h5cjnVFbzc</a></p>
 
 <ul>
-<li>When ranging over a slice, two values are returned for each iteration.
+<li>When ranging over a map, two values are returned for each iteration.
 The first is the key, and the second is a copy of the element at that key.</li>
 </ul>
 
@@ -827,7 +831,7 @@ p = &amp;i // p now points to i
           <section>
               
 
-<h3 id="structures">Structures</h3>
+<section><h3 id="structures">Structures</h3>
 
 <p><a href="https://play.golang.org/p/zQWVtBPH3-w">https://play.golang.org/p/zQWVtBPH3-w</a></p>
 
@@ -849,77 +853,445 @@ func main() {
           <section>
               
 
-<h3 id="structures-and-functions">Structures and functions</h3>
-
-<p>[]()</p>
-
-<pre><code></code></pre>
-
-
-            </section>
-          <section>
-              
-
 <h3 id="structure-methods">Structure Methods</h3>
 
-<p>[]()</p>
+<p><a href="https://play.golang.org/p/OdmLz3h-AbI">https://play.golang.org/p/OdmLz3h-AbI</a></p>
 
-<pre><code></code></pre>
+<pre><code>// Mumble returns a greeting string
+func (p *Person) Mumble() string {
+	return &quot;Hey, my name is &quot; + p.Name + &quot; &quot; + p.LastN
+}
 
-
-            </section>
-          <section>
-              
-
-<h3 id="interfaces">Interfaces</h3>
-
-<p>[]()</p>
-
-<pre><code></code></pre>
+// Speak Mumbles to standard output
+func (p *Person) Speak() {
+	fmt.Println(p.Mumble())
+}
+</code></pre>
 
 
             </section>
           <section>
               
 
-<h3 id="concurrency-go-routines">Concurrency: Go routines</h3>
+<h3 id="structure-methods-1">Structure Methods</h3>
 
-<p><a href="https://play.golang.org/p/SbM4wqm4u-K">https://play.golang.org/p/SbM4wqm4u-K</a></p>
+<p><a href="https://play.golang.org/p/OdmLz3h-AbI">https://play.golang.org/p/OdmLz3h-AbI</a></p>
 
-<pre><code></code></pre>
+<pre><code>func main() {
 
+	// Struct literal for John
+	john := Person{&quot;John&quot;, &quot;Doe&quot;, &quot;john@doe.jd&quot;}
 
-            </section>
-          <section>
-              
+	// We can see that the standard output handles
+	// Data streaming easily (Not overload required)
+	fmt.Println(&quot;The person is&quot;, john)
 
-<h3 id="concurrency-channels">Concurrency: Channels</h3>
+	// The struct is edowed with two methods
+	fmt.Println(john.Mumble())
 
-<p>[]()</p>
-
-<pre><code></code></pre>
-
-
-            </section>
-          <section>
-              
-
-<h3 id="simple-testing">Simple Testing</h3>
-
-<p>[]()</p>
-
-<pre><code></code></pre>
+	// Tell'em John!
+	john.Speak()
+}
+</code></pre>
+</section>
 
 
             </section>
           <section>
               
 
-<h3 id="testing">Testing</h3>
+<section><h3 id="interfaces">Interfaces</h3>
 
-<p>[]()</p>
+<p><a href="https://play.golang.org/p/a_DtRz6gvub">https://play.golang.org/p/a_DtRz6gvub</a></p>
 
-<pre><code></code></pre>
+<ul>
+<li>An interface type is defined as a set of method signatures.</li>
+</ul>
+
+<pre><code>// Cow structure
+type Cow struct {
+	Color string
+}
+
+// Cow makes &quot;moo&quot;
+func (c *Cow) MakeSound() {
+	fmt.Println(&quot;Moo&quot;)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="interfaces-1">Interfaces</h3>
+
+<p><a href="https://play.golang.org/p/a_DtRz6gvub">https://play.golang.org/p/a_DtRz6gvub</a></p>
+
+<pre><code>// Pigeon structure
+type Pigeon struct {
+	Age int
+}
+
+// Pidgeon makes &quot;Coo&quot;
+func (p *Pigeon) MakeSound() {
+	fmt.Println(&quot;Coo&quot;)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="interfaces-2">Interfaces</h3>
+
+<p><a href="https://play.golang.org/p/a_DtRz6gvub">https://play.golang.org/p/a_DtRz6gvub</a></p>
+
+<pre><code>// Dog structure
+type Dog struct {
+	Age   int
+	Color string
+	Name  string
+}
+
+// Dogs bark
+func (d *Dog) MakeSound() {
+	fmt.Println(&quot;Bark!&quot;)
+}
+
+// Dogs can roll too
+func (d *Dog) Roll() {
+	fmt.Println(&quot;Dog&quot;, d.Name, &quot;rolls over&quot;)
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="interfaces-3">Interfaces</h3>
+
+<p><a href="https://play.golang.org/p/a_DtRz6gvub">https://play.golang.org/p/a_DtRz6gvub</a></p>
+
+<ul>
+<li>Interfaces are implemented <em>implicitly</em>, no keywords needs to be added,
+if interface methods are implemented, the interface implemented.</li>
+</ul>
+
+<pre><code>// Sounder groups all types which can MakeSound
+type Sounder interface {
+	MakeSound()
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="interfaces-4">Interfaces</h3>
+
+<p><a href="https://play.golang.org/p/a_DtRz6gvub">https://play.golang.org/p/a_DtRz6gvub</a></p>
+
+<pre><code>// Interfaces are types
+// We can instance a Sounder
+var animal Sounder
+
+// Pidgeons comply the interface
+animal = &amp;Pigeon{1}
+
+animal.MakeSound()
+
+// Cows comply the interface
+animal = &amp;Cow{&quot;black&quot;}
+
+animal.MakeSound()
+
+// Dogs comply the interface
+animal = &amp;Dog{3, &quot;Black and White&quot;, &quot;Max&quot;}
+animal.MakeSound()
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="concurrency-go-routines">Concurrency: Go routines</h3>
+
+<p><a href="https://play.golang.org/p/2V3uawcTh3K">https://play.golang.org/p/2V3uawcTh3K</a></p>
+
+<ul>
+<li>A goroutine is a lightweight thread managed by the Go runtime.</li>
+<li>The syntax is a simple as <code>go function_call()</code>.</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="concurrency-go-routines-1">Concurrency: Go routines</h3>
+
+<p><a href="https://play.golang.org/p/2V3uawcTh3K">https://play.golang.org/p/2V3uawcTh3K</a></p>
+
+<pre><code>// One prints Hello 10 times
+func One() {
+	for i := 0; i &lt; 10; i++ {
+		fmt.Println(&quot;Hello&quot;)
+	}
+}
+
+// Two prints World 10 times
+func Two() {
+	for i := 0; i &lt; 10; i++ {
+		fmt.Println(&quot;World&quot;)
+	}
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="concurrency-go-routines-2">Concurrency: Go routines</h3>
+
+<p><a href="https://play.golang.org/p/2V3uawcTh3K">https://play.golang.org/p/2V3uawcTh3K</a></p>
+
+<pre><code>func main() {
+
+	// Starting a couple of go routines
+	go Two()
+	go One()
+	// Uncomment below :)
+	// go time.Sleep(3 * time.Second)
+	time.Sleep(3 * time.Second)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="concurrency-channels">Concurrency: Channels</h3>
+
+<ul>
+<li>Channels are a typed conduit through which you can send and receive values with the channel operator, <code>&lt;-</code>.</li>
+</ul>
+
+<pre><code>ch &lt;- v    // Send v to channel ch.
+v := &lt;-ch  // Receive from ch, and
+           // assign value to v.
+</code></pre>
+
+<ul>
+<li>The data flows in the direction of the arrow.</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="concurrency-channels-1">Concurrency: Channels</h3>
+
+<p>Like maps and slices, channels must be created before use:</p>
+
+<pre><code>ch := make(chan int)
+</code></pre>
+
+<ul>
+<li>By default, sends and receives block until the other side is ready. This allows goroutines to synchronize without explicit locks or condition variables.</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li><a href="https://play.golang.org/p/iwG278r_3xZ">https://play.golang.org/p/iwG278r_3xZ</a></li>
+</ul>
+
+<pre><code>// Greet sends &quot;Hello World&quot; through a channel
+func Greet(c chan string) {
+	
+	// Text to be sent
+	greet := &quot;Hello world&quot;
+	
+	// Loop over the string
+	for _, v := range greet {
+		// send each character on the channel
+		c &lt;- string(v)
+	}
+	
+	// Close the channel once the operation is done
+	close(c)
+}
+
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li><a href="https://play.golang.org/p/iwG278r_3xZ">https://play.golang.org/p/iwG278r_3xZ</a></li>
+</ul>
+
+<pre><code>// We need to create the channel first
+c := make(chan string)
+
+// Go routine for the Greet function
+go Greet(c)
+
+// Iterate over the input channel
+for i := range c {
+	fmt.Println(i)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="documenting-the-code">Documenting the code</h3>
+
+<ul>
+<li>Documenting the code requires a special formatting.</li>
+<li>The documentation is generated automatically by <code>godoc</code> tool.</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<ul>
+<li><a href="https://godoc.org/github.com/go-chi/chi/middleware#LogEntry">https://godoc.org/github.com/go-chi/chi/middleware#LogEntry</a></li>
+<li><a href="https://godoc.org/github.com/go-chi/chi/middleware#LogFormatter">https://godoc.org/github.com/go-chi/chi/middleware#LogFormatter</a></li>
+</ul>
+
+<pre><code>// LogFormatter initiates the beginning of a new LogEntry per request.
+// See DefaultLogFormatter for an example implementation.
+type LogFormatter interface {
+	NewLogEntry(r *http.Request) LogEntry
+}
+
+// LogEntry records the final log when a request completes.
+// See defaultLogEntry for an example implementation.
+type LogEntry interface {
+	Write(status, bytes int, elapsed time.Duration)
+	Panic(v interface{}, stack []byte)
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<section><h3 id="testing">Testing</h3>
+
+<p><a href="https://play.golang.org/p/DlJRghK5eRQ">https://play.golang.org/p/DlJRghK5eRQ</a></p>
+
+<ul>
+<li>Part of the standard library <code>&quot;testing&quot;</code></li>
+<li>Executed with the command <code>go test</code></li>
+<li>File naming convention <code>package_test.go</code></li>
+</ul>
+
+<pre><code>import (
+	&quot;testing&quot;
+)
+
+// Squared squares integer numbers
+func Squared(number int) int {
+	return number * number
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="testing-1">Testing</h3>
+
+<p><a href="https://play.golang.org/p/DlJRghK5eRQ">https://play.golang.org/p/DlJRghK5eRQ</a></p>
+
+<ul>
+<li>For sake of example, lets define a struct</li>
+</ul>
+
+<pre><code>// testCase is a struct for the test cases
+type testCase struct {
+	input int
+	wants int
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="testing-2">Testing</h3>
+
+<p><a href="https://play.golang.org/p/DlJRghK5eRQ">https://play.golang.org/p/DlJRghK5eRQ</a></p>
+
+<pre><code>// TestSquared tests the function Squared
+func TestSquared(t *testing.T) {
+	testCases := []testCase{{2, 4}, {3, 9}, {10, 100}, {5, 25}}
+	// Uncomment below :)
+	//testCases = []testCase{{2, 4}, {3, 9}, {10, 100}, {5, 25}, {2,2}}
+
+	// Iterate over the testCases slice
+	for _, test := range testCases {
+		if Squared(test.input) != test.wants {
+			t.Errorf(&quot;Failed test, expected %d got %d&quot;, test.wants, Squared(test.input))
+		}
+	}
+}
+</code></pre>
+</section>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="advanced-topics">Advanced topics</h3>
+
+<ul>
+<li><code>Logging</code> with <code>&quot;log&quot;</code>.</li>
+<li>Input/Output operations a.k.a. <code>Writters</code> and <code>Readers</code>.</li>
+<li>Buffered channels.</li>
+<li><code>&quot;sync&quot;</code> package to synchronize <code>go</code> routines.</li>
+<li>Testing patterns with Go.</li>
+<li>Interfaces, Pointers and Structures.</li>
+<li><code>vgo</code> and package versioning.</li>
+<li>Go routine channel <code>select</code> operation.</li>
+</ul>
+
+
+            </section>
+          <section>
+              
+
+<h1 id="final-words">Final Words&hellip;</h1>
+
+<h2 id="thanks-for-your-time">Thanks for your time</h2>
 
             </section>
           
