@@ -485,7 +485,7 @@ func main() {
 
 <h4 id="if-else">If else</h4>
 
-<p><a href="https://play.golang.org/p/p8PEjGHd8WM">https://play.golang.org/p/p8PEjGHd8WM</a></p>
+<p><a href="https://play.golang.org/p/zqAHNoFiUZO">https://play.golang.org/p/zqAHNoFiUZO</a></p>
 
 <pre><code>package main
 
@@ -517,7 +517,7 @@ func main() {
 func abs(x float64) float64 {
 	if x &lt; 0 {
 		return abs(-x)
-	} elif x == 0 {
+	} else if x == 0 {
 		return 0
 	} else {
 		return x
@@ -729,7 +729,7 @@ for i, v := range pow {
 
 <h3 id="range-operator-for-maps">Range operator for maps</h3>
 
-<p><a href="https://play.golang.org/p/2h5cjnVFbzc">https://play.golang.org/p/2h5cjnVFbzc</a></p>
+<p><a href="https://play.golang.org/p/WmxXd4xsftV">https://play.golang.org/p/WmxXd4xsftV</a></p>
 
 <ul>
 <li>When ranging over a map, two values are returned for each iteration.
@@ -737,8 +737,8 @@ The first is the key, and the second is a copy of the element at that key.</li>
 </ul>
 
 <pre><code>var pow = map[int]int{0:1, 1:2, 2:4, 3:8}
-for i, v := range pow {
-	fmt.Printf(&quot;2**%d = %d\n&quot;, i, v)
+for k, v := range pow {
+	fmt.Printf(&quot;2**%d = %d\n&quot;, k, v)
 }
 </code></pre>
 </section>
