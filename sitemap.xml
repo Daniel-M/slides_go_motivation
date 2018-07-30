@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>localhost/categories/</loc>
-    <priority>0</priority>
+    <loc>localhost/</loc>
   </url>
   
   <url>
-    <loc>localhost/</loc>
+    <loc>localhost/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
