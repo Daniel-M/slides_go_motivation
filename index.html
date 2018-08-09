@@ -820,7 +820,7 @@ p = &amp;i // p now points to i
 <p>The <code>*</code> operator denotes the pointer&rsquo;s underlying value.</p>
 
 <pre><code>fmt.Println(*p) // read i through the pointer p
-*p = 21         // set i through the pointer p
++p = 21         // set i through the pointer p
 </code></pre>
 
 <p>This is known as &ldquo;dereferencing&rdquo; or &ldquo;indirecting&rdquo;.</p>
@@ -891,6 +891,46 @@ func (p *Person) Speak() {
 
 	// Tell'em John!
 	john.Speak()
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="good-practices-with-structures">Good practices with structures</h3>
+
+<p>Create Structure instances with <code>New...</code> functions,</p>
+
+<pre><code class="language-go">type Something {
+  ...
+}
+
+  ...
+
+func NewSomething(...) *Something {
+ ...
+}
+</code></pre>
+
+
+            </section>
+          <section>
+              
+
+<h3 id="good-practices-with-structures-1">Good practices with structures</h3>
+
+<p>Create Structure instances with <code>New...</code> functions,</p>
+
+<pre><code class="language-go">type Something {
+  ...
+}
+
+  ...
+
+func NewSomething(...) *Something {
+ ...
 }
 </code></pre>
 </section>
